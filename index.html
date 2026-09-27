@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marrow House</title>
+<meta name="description" content="A first-person PS1-style horror game. It has been three Sundays since anyone fed it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&family=Homemade+Apple&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<div id="ui">
+  <div id="crosshair"></div>
+  <div id="hud">
+    <div id="objective"></div>
+    <div id="hint"></div>
+    <div id="prompt"></div>
+    <div id="subs"></div>
+    <div id="meters">
+      <div id="battery"><span>LIGHT</span><div class="bar"><i></i></div></div>
+      <div id="stamina"><div class="bar"><i></i></div></div>
+    </div>
+    <div id="inventory"></div>
+  </div>
+
+  <div id="title" class="screen">
+    <div class="title-inner">
+      <div class="pre">a story in the snow</div>
+      <h1>MARROW HOUSE</h1>
+      <div class="tag">It has been three Sundays since anyone fed it.</div>
+      <div class="menu">
+        <button id="btn-new">New Game</button>
+        <button id="btn-continue" hidden>Continue</button>
+      </div>
+      <div class="controls">
+        <div><b>WASD</b> move</div><div><b>MOUSE</b> look</div>
+        <div><b>SHIFT</b> run</div><div><b>C / CTRL</b> crouch</div>
+        <div><b>E</b> interact</div><div><b>F</b> flashlight</div>
+        <div><b>Q</b> whistle for Biscuit</div><div><b>TAB</b> journal</div>
+      </div>
+      <div class="phones">best played in the dark, with headphones</div>
+    </div>
+  </div>
+
+  <div id="intro" class="screen"><div id="intro-text"></div><div class="continue">click to continue</div></div>
+
+  <div id="note" class="screen">
+    <div class="paper">
+      <div class="note-title"></div>
+      <div class="note-body"></div>
+    </div>
+    <div class="note-foot">[E] / click to put it down</div>
+  </div>
+
+  <div id="journal" class="screen">
+    <div class="journal-inner">
+      <h2>Journal</h2>
+      <div class="j-obj"></div>
+      <div class="j-inv"></div>
+      <h3>Pages</h3>
+      <div class="j-notes"></div>
+      <div class="note-foot">[TAB] close</div>
+    </div>
+  </div>
+
+  <div id="pause" class="screen">
+    <div class="pause-inner">
+      <h2>Paused</h2>
+      <button id="btn-resume">Resume</button>
+      <label>Mouse sensitivity <input id="opt-sens" type="range" min="0.3" max="3" step="0.05" value="1"></label>
+      <label>Volume <input id="opt-vol" type="range" min="0" max="1" step="0.05" value="0.85"></label>
+      <label class="check"><input id="opt-scan" type="checkbox" checked> CRT scanlines</label>
+      <label class="check"><input id="opt-invert" type="checkbox"> Invert mouse Y</label>
+      <button id="btn-retry">Restart from checkpoint</button>
+      <button id="btn-quit">Quit to title</button>
+    </div>
+  </div>
+
+  <div id="death" class="screen"><div class="death-text"></div><div class="continue">click to wake up</div></div>
+  <div id="ending" class="screen"><div class="ending-text"></div></div>
+  <div id="error" class="screen"><div class="err"></div></div>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/textures.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/props.js"></script>
+<script src="js/level.js"></script>
+<script src="js/models.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/story.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
