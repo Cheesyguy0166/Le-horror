@@ -94,7 +94,7 @@ button {
   border: 1px solid #4d4435; padding: 4px 26px; min-width: 240px; cursor: pointer; letter-spacing: 2px;
 }
 button:hover, button:focus { background: #3a1410; border-color: #9c3a2a; color: #fff; outline: none; }
-.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 30px; margin: 34px auto 0; max-width: 460px; font-size: 19px; color: var(--dim); text-align: left; }
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 30px; margin: 34px auto 0; max-width: 540px; font-size: 19px; color: var(--dim); text-align: left; }
 .controls b { color: #cabb98; font-weight: normal; }
 .phones { margin-top: 22px; font-family: var(--serif); font-style: italic; color: #6d6456; font-size: 17px; }
 
